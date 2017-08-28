@@ -39,6 +39,12 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                     message: 'what'
                 });
             break;
+            case 'pullTest':
+                bot.sendMessage({
+                    to: channelID,
+                    message: 'It worked'
+                });
+            break;
             // Just add any case commands if you want to..
          }
      }
