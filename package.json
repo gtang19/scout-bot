@@ -1,0 +1,11 @@
+{
+  "name": "greeter-bot",
+  "version": "1.0.0",
+  "description": "Memes and shit",
+  "main": "bot.js",
+  "author": "Skullion123",
+  "dependencies": {
+    "discord.io": "^2.5.2",
+    "winston": "^2.3.1"
+  }
+}
