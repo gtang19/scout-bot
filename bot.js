@@ -52,6 +52,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                 });
             break;
             // Just add any case commands if you want to..
+            // Does ATOM update automatically when the file changes?
          }
      }
 });
