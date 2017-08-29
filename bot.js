@@ -48,7 +48,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             case 1:
                 bot.sendMessage({
                   to: channelID,
-                  message: 1+1
+                  message: 'num test'
                 });
             break;
             // Just add any case commands if you want to..
