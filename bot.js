@@ -39,16 +39,16 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                     message: 'what'
                 });
             break;
-            case 'pullTest':
+            case 'github':
                 bot.sendMessage({
                     to: channelID,
-                    message: 'It worked'
+                    message: 'https://github.com/gtang19/scout-bot'
                 });
             break;
-            case '1':
+            case 'shoop':
                 bot.sendMessage({
                   to: channelID,
-                  message: (1+1)
+                  message: ('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
                 });
             break;
             // Just add any case commands if you want to..
