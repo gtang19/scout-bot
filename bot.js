@@ -51,11 +51,11 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                   message: ('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
                 });
 			break;
-			case 'tyreem':
-				bot.sendMessage({
-					to: channelID,
-					message: ('supreeeeeeeeem')
-				})	
+			 case 'tyreem':
+                bot.sendMessage({
+                  to: channelID,
+                  message: ('supreem')
+                });
             break;
             // Just add any case commands if you want to..
          }
