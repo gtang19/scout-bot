@@ -61,7 +61,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			 case 'adam':
                 bot.sendMessage({
                   to: channelID,
-                  message: ('is a piece of shit')
+                  message: ('what did adam even do real question')
                 });
 			      break;
 			      case 'tyreem':
