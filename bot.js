@@ -50,7 +50,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                   to: channelID,
                   message: ('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
                 });
-<<<<<<< HEAD
+
 			break;
 			 case 'tyreem':
                 bot.sendMessage({
@@ -62,15 +62,13 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                 bot.sendMessage({
                   to: channelID,
                   message: ('is a piece of shit')
-                });	
-=======
+                });
 			      break;
 			      case 'tyreem':
 				        bot.sendMessage({
 					        to: channelID,
 					        message: ('supreeeeeeeeem')
 				        });
->>>>>>> origin/master
             break;
             // Just add any case commands if you want to..
          }
