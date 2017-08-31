@@ -56,6 +56,12 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                   to: channelID,
                   message: ('supreem')
                 });
+			break;
+			 case 'adam':
+                bot.sendMessage({
+                  to: channelID,
+                  message: ('is a piece of shit')
+                });	
             break;
             // Just add any case commands if you want to..
          }
