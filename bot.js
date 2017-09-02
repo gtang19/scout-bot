@@ -43,6 +43,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                     to: channelID,
                     message: (testVariable)
                 });
+            break;
             case 'test':
                 for (i=0; i < 10; i++){
                 bot.sendMessage({
