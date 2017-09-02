@@ -17,6 +17,9 @@ bot.on('ready', function (evt) {
     logger.info('Logged in as: ');
     logger.info(bot.username + ' - (' + bot.id + ')');
 });
+
+//Experimenting with variables
+var testVariable = (1);
 bot.on('message', function (user, userID, channelID, message, evt) {
     // Our bot needs to know if it will execute a command
     // It will listen for messages that will start with `!`
@@ -32,12 +35,16 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                     to: channelID,
                     message: 'pong'
                 });
+            case 'resetTest':
+                testVariable = 0
             break;
-            case 'who':
+            case 'test':
+                while(testVariable < 10){
                 bot.sendMessage({
                     to: channelID,
-                    message: 'what'
+                    message: (testVariable++) //don't be dumb like me and try to put a ; here
                 });
+              }
             break;
             case 'github':
                 bot.sendMessage({
