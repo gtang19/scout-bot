@@ -36,15 +36,20 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                     message: 'pong'
                 });
             case 'resetTest':
-                testVariable = 0
+                testVariable = 1
             break;
-            case 'test':
-                while(testVariable < 10){
+            case 'what':
                 bot.sendMessage({
                     to: channelID,
-                    message: (testVariable++) //don't be dumb like me and try to put a ; here
+                    message: (testVariable)
                 });
-              }
+            case 'test':
+                for (i=0; i < 10; i++){
+                bot.sendMessage({
+                    to: channelID,
+                    message: (testVariable + i) //don't be dumb like me and try to put a ; here
+                });
+}
             break;
             case 'github':
                 bot.sendMessage({
