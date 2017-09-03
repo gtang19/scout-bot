@@ -20,7 +20,6 @@ bot.on('ready', function (evt) {
 
 //Experimenting with variables
 var testVariable = (1);
-
 bot.on('message', function (user, userID, channelID, message, evt) {
   //Allows the bot to behave differently based on what room it is in
   if (channelID == 353938633641951251){ //test-channel
@@ -44,20 +43,6 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                         to: channelID,
                         message: 'pong'
                     });
-                case 'resetTest':
-                    testVariable = 1
-                break;
-                case 'add':
-                     bot.sendMessage({
-                       to:channelID,
-                       message: (testVariable++)
-                     });
-                break;
-                case 'what':
-                    bot.sendMessage({
-                        to: channelID,
-                        message: (testVariable)
-                    });
                 break;
                 case 'channelID': //Displays channel ID
                     bot.sendMessage({
@@ -71,13 +56,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                         message: 'https://github.com/gtang19/scout-bot'
                     });
                 break;
-                case 'shoop':
-                    bot.sendMessage({
-                      to: channelID,
-                      message: ('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
-                    });
 
-    			break;
                 // Just add any case commands if you want to..
              } //end of switch
          } //commands starting with '!'
