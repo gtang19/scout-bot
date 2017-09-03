@@ -1,4 +1,4 @@
-var Discord = require('discord.io');
+Bvar Discord = require('discord.io');
 var logger = require('winston');
 var auth = require('./auth.json');
 // Configure logger settings
@@ -20,6 +20,10 @@ bot.on('ready', function (evt) {
 
 //Experimenting with variables
 var testVariable = (1);
+bot.SendMessage({
+  to: channelID,
+  message: 'testing'
+});
 bot.on('message', function (user, userID, channelID, message, evt) {
     // Our bot needs to know if it will execute a command
     // It will listen for messages that will start with `!`
