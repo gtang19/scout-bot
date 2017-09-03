@@ -1,4 +1,4 @@
-Bvar Discord = require('discord.io');
+var Discord = require('discord.io');
 var logger = require('winston');
 var auth = require('./auth.json');
 // Configure logger settings
@@ -20,11 +20,16 @@ bot.on('ready', function (evt) {
 
 //Experimenting with variables
 var testVariable = (1);
-bot.SendMessage({
-  to: channelID,
-  message: 'testing'
-});
+
 bot.on('message', function (user, userID, channelID, message, evt) {
+
+  /*bot.sendMessage({
+    to: channelID,
+    message: testVariable++
+  }); */
+
+
+
     // Our bot needs to know if it will execute a command
     // It will listen for messages that will start with `!`
     if (message.substring(0, 1) == '!') {
@@ -42,6 +47,14 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             case 'resetTest':
                 testVariable = 1
             break;
+            case 'loop':
+                while(testVariable < 3){
+                 bot.sendMessage({
+                   to:channelID,
+                   message: (testVariable++)
+                 });
+               }
+            break;
             case 'what':
                 bot.sendMessage({
                     to: channelID,
@@ -49,12 +62,11 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                 });
             break;
             case 'test':
-                for (i=0; i < 10; i++){
                 bot.sendMessage({
                     to: channelID,
-                    message: (testVariable + i) //don't be dumb like me and try to put a ; here
+                    message: '!test'
                 });
-}
+
             break;
             case 'github':
                 bot.sendMessage({
@@ -69,24 +81,6 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                 });
 
 			break;
-			 case 'tyreem':
-                bot.sendMessage({
-                  to: channelID,
-                  message: ('supreem')
-                });
-			break;
-			 case 'adam':
-                bot.sendMessage({
-                  to: channelID,
-                  message: ('what did adam even do real question')
-                });
-			      break;
-			      case 'tyreem':
-				        bot.sendMessage({
-					        to: channelID,
-					        message: ('supreeeeeeeeem')
-				        });
-            break;
             // Just add any case commands if you want to..
          }
      }
