@@ -34,10 +34,11 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                 case 'test':
                     bot.sendMessage({
                       to:channelID,
-                      message: message
+                      message: channelID
                     });
                     console.log('test')
                 break;
+
                 case 'ping':
                     bot.sendMessage({
                         to: channelID,
@@ -56,9 +57,21 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                         message: 'https://github.com/gtang19/scout-bot'
                     });
                 break;
-
                 // Just add any case commands if you want to..
              } //end of switch
          } //commands starting with '!'
       } //test-channel
+  if (message.substring(0, 1) == '!') {               //commands starting with '!'
+      var args = message.substring(1).split(' ');     // args splits up each word after the '!'
+      var cmd = args[0];
+      args = args.splice(1);
+      switch(cmd) {
+        case 'pm':
+          bot.sendMessage({
+            to: userID,
+            message: args[0]
+          });
+        break;
+      }
+  };
 });
